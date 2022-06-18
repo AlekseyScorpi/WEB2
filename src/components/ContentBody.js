@@ -1,16 +1,25 @@
-import React from "react";
+import React from 'react'
+import { Route, Routes } from "react-router-dom";
 import {
     Box,
-    useColorMode,
+    useColorMode
   } from '@chakra-ui/react';
 
-const ContentBody = () => {
-    const { colorMode } = useColorMode();
-    return(
-        <Box h='2000px' w='100%' bg={colorMode === 'light' ? 'gray.100' : "gray.800"}>
+import Home from './Home';
+import About from './About';
+import Works from './Works';
 
+
+export default function ContentBody() {
+    const {colorMode} = useColorMode();
+    console.log(colorMode);
+  return (
+    <Box w='100%' h='80vh' bg={colorMode === 'light' ? 'gray.50' : 'gray.600'}>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/works' element={<Works />} />
+        </Routes>
         </Box>
-    )
+  )
 }
-
-export {ContentBody}

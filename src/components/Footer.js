@@ -1,17 +1,24 @@
-import React from "react";
-import {
+import { 
     Box,
-    Heading,
     useColorMode,
-    Image
-  } from '@chakra-ui/react';
-const Footer = () => {
-    const {colorMode} = useColorMode();
-    return(
-        <Box h="60px" w = "100%" bg={colorMode === 'light' ? 'gray.400' : "gray.700"}>
-            <Heading as='h3' textAlign='center'>2022 ALL RIGHTS RESERVED ©</Heading>
-        </Box>
-    )
-}
+    IconButton,
+    Flex
+} from '@chakra-ui/react'
+import React from 'react'
+import { FaVk, FaTelegram, FaGithub, FaDiscord, FaViber } from 'react-icons/fa';
 
-export {Footer}
+export default function Footer() {
+    const {colorMode} = useColorMode();
+  return (
+    <Box w='100%' bg={colorMode === 'light' ? 'gray.300' : 'gray.900'}>
+        <Flex justifyContent='space-between' alignItems='center' p={4} h='10vh'>
+            <IconButton size='lg' icon={<FaDiscord />} boxSize='50px'></IconButton>
+            <IconButton size='lg' icon={<FaTelegram />} boxSize='50px'></IconButton>
+            <IconButton size='lg' icon={<FaVk />} boxSize='50px'></IconButton>
+            <IconButton size='lg' icon={<FaGithub />} boxSize='50px'></IconButton>
+            <IconButton size='lg' icon={<FaViber />} boxSize='50px'></IconButton>
+        </Flex>
+        
+    </Box>
+  )
+}
