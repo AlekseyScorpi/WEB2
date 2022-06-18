@@ -1,11 +1,13 @@
 {
   "files": {
-    "main.js": "/WEB2/static/js/main.7af03754.js",
+    "main.js": "/WEB2/static/js/main.fadf3622.js",
+    "static/media/chair.png": "/WEB2/static/media/chair.a26fac5a1460253335f4.png",
+    "static/media/chair_d.png": "/WEB2/static/media/chair_d.623b0b9678b647c0ea26.png",
     "static/media/test.jpeg": "/WEB2/static/media/test.aa0b00b4934f6147eaaa.jpeg",
     "index.html": "/WEB2/index.html",
-    "main.7af03754.js.map": "/WEB2/static/js/main.7af03754.js.map"
+    "main.fadf3622.js.map": "/WEB2/static/js/main.fadf3622.js.map"
   },
   "entrypoints": [
-    "static/js/main.7af03754.js"
+    "static/js/main.fadf3622.js"
   ]
 }
