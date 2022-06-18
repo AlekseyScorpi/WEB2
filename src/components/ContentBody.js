@@ -16,9 +16,9 @@ export default function ContentBody() {
   return (
     <Box w='100%' h='80vh' bg={colorMode === 'light' ? 'gray.50' : 'gray.600'}>
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/works' element={<Works />} />
+          <Route path='WEB2/' element={<Home />} />
+          <Route path='WEB2/about' element={<About />} />
+          <Route path='WEB2/works' element={<Works />} />
         </Routes>
         </Box>
   )
