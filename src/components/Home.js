@@ -9,7 +9,7 @@ import CustomImage from './CustomImage'
 export default function Home() {
   const {colorMode} = useColorMode();
   return (
-    <SimpleGrid flexDirection='column-reverse' justifyContent='space-between' h='100%' columns={[1, 1, 1, 2, 2, 2]}>
+    <Flex  flexDirection={['column-reverse', 'column-reverse', 'column-reverse', 'row', 'row', 'row']} justifyContent={['center', 'center', 'center', 'space-between', 'space-between', 'space-between']} h='100%'>
       <Box fontSize={[20, 24, 28, 32, 32, 32]} w='100%' display='flex' justifyContent='center' alignItems='center'>
         <Box m={6} p={2} border='8px' borderRadius={16} borderStyle='double' boxShadow={colorMode === 'light' ? '0px 0px 10px black' : '0px 0px 10px red'}>
         Hi, Welcome to my new WebSite! I'm Aleksey aka AlekseyScorpi. Here you can see my few works and contact me in any convenient way.
@@ -20,7 +20,7 @@ export default function Home() {
       <Box w='100%' display='flex' justifyContent='center' alignItems='center' p='10%'>
         <CustomImage colorMode={colorMode} />
       </Box>
-    </SimpleGrid>
+    </Flex>
   )
 
 }
