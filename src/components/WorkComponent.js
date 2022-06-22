@@ -32,8 +32,8 @@ export default class WorkComponent extends Component {
   render() {
     //console.log(contentArray[this.state.index]);
     return (
-        <Flex h='100%' alignItems='center' justify='space-between' p={12}>
-            <Button onClick={() =>{
+        <Flex w='100%' h='80vh' alignItems='center' justify='center' >
+            <Button fontSize={[8, 10, 12, 14, 16, 18]} m={[0, 1, 2, 2, 2, 2]} w='10%' onClick={() =>{
                 if (this.state.index > 0){
                     this.setState({index : this.state.index - 1});
                 }else{
@@ -42,8 +42,8 @@ export default class WorkComponent extends Component {
             }}>
                 Previous
             </Button>
-            <WorkContainer data={contentArray[this.state.index]} />
-            <Button onClick={() =>{
+            <WorkContainer data={contentArray[this.state.index]}/>
+            <Button fontSize={[8, 10, 12, 14, 16, 18]} m={[0, 1, 2, 2, 2, 2]} w='10%' onClick={() =>{
                 if (this.state.index < 3){
                     this.setState({index : this.state.index + 1});
                 }else{

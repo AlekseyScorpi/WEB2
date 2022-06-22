@@ -36,7 +36,7 @@ export default class CustomImage extends Component {
 
   render() {
     return (
-        <Image boxShadow={this.colorMode === 'light' ? '0px 0px 10px black' : '0px 0px 10px red'} border='4px' borderColor={this.colorMode === 'light' ? 'gray.900' : 'gray.700'} src={this.state.imagesArray[this.state.index]} boxSize={['300px', '300px', '300px', '350px', '400px', '400px']} borderRadius='full' />
+      <Image m={8} objectFit='cover' boxShadow={this.colorMode === 'light' ? '0px 0px 10px black' : '0px 0px 10px red'} border='4px' borderColor={this.colorMode === 'light' ? 'gray.900' : 'gray.700'} src={this.state.imagesArray[this.state.index]} boxSize={['150px', '250px', '325px', '350px', '400px', '400px']} borderRadius='full'/>
     )
   }
 }
