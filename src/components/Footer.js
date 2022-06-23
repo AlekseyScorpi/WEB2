@@ -11,8 +11,7 @@ import {
 } from '@chakra-ui/react'
 import React from 'react'
 import { FaVk, FaTelegram, FaGithub, FaDiscord, FaViber } from 'react-icons/fa';
-import {GiHamburgerMenu} from 'react-icons/gi'
-
+import { AiOutlineMenu } from 'react-icons/ai';
 
 
 export default function Footer() {
@@ -28,7 +27,7 @@ export default function Footer() {
             <Flex alignItems='center' w='100%' justifyContent='center' display={['flex', 'flex', 'none', 'none', 'none', 'none']}>
               <Heading mx={[1, 2, 8]} fontSize={[12, 20, 24]} as='h3'>My contacts</Heading>
               <Menu>
-                <MenuButton mx={[1, 2, 8]} as={IconButton} icon={<GiHamburgerMenu />}></MenuButton>
+                <MenuButton mx={[1, 2, 8]} as={IconButton} icon={<AiOutlineMenu />}></MenuButton>
                 <MenuList>
                   <MenuItem icon={<FaTelegram />} onClick={() => {window.open('https://teleg.run/alekseyscorpi', '_blank')}}>Telegram</MenuItem>
                   <MenuItem icon={<FaVk />} onClick={() => {window.open('https://vk.com/alekseyscorpi', '_blank')}}>VK</MenuItem>

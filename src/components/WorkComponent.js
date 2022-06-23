@@ -30,7 +30,6 @@ export default class WorkComponent extends Component {
 
 
   render() {
-    //console.log(contentArray[this.state.index]);
     return (
         <Flex w='100%' h='80vh' alignItems='center' justify='center' >
             <Button fontSize={[8, 10, 12, 14, 16, 18]} m={[0, 1, 2, 2, 2, 2]} w='10%' onClick={() =>{
