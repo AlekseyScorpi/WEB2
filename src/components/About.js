@@ -15,7 +15,8 @@ export default function About() {
         </Box>
       </Box>
       <Box maxH={['50%', '50%', '50%', '100%', '100%', '100%']} w='100%' display='flex' justifyContent='center' alignItems='center'>
-        <Image maxH='100%' src={colorMode === 'light' ? chairL : chairD} boxSize={['100%', '300px', '375px', '450px', '525px', '600px']} />
+        <Image display={colorMode === 'light' ? 'block' : 'none'} maxH='100%' src={chairL} boxSize={['100%', '300px', '375px', '450px', '525px', '600px']} />
+        <Image display={colorMode === 'dark' ? 'block' : 'none'} maxH='100%' src={chairD} boxSize={['100%', '300px', '375px', '450px', '525px', '600px']} />
       </Box>
     </Flex>
   )
