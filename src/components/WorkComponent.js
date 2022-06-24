@@ -1,5 +1,6 @@
 import { Button, Flex } from '@chakra-ui/react'
 import React, { Component } from 'react'
+import { motion } from 'framer-motion'
 import WorkContainer from './WorkContainer'
 import fish1 from '../images/fish1.png'
 import fish2 from '../images/fish2.png'
@@ -41,7 +42,7 @@ export default class WorkComponent extends Component {
   render() {
     return (
         <Flex w='100%' h='80vh' alignItems='center' justify='center' >
-            <Button fontSize={[8, 10, 12, 14, 16, 18]} m={[0, 1, 2, 2, 2, 2]} w='10%' onClick={() =>{
+            <Button as={motion.button} initial={{x : -2000, y : -2000, opacity : 0}} animate={{x : 0, y : 0, opacity : 1}} transition='0.5s' fontSize={[8, 10, 12, 14, 16, 18]} m={[0, 1, 2, 2, 2, 2]} w='10%' onClick={() =>{
                 if (this.state.index > 0){
                     this.setState({index : this.state.index - 1});
                 }else{
@@ -51,7 +52,7 @@ export default class WorkComponent extends Component {
                 Previous
             </Button>
             <WorkContainer data={contentArray[this.state.index]}/>
-            <Button fontSize={[8, 10, 12, 14, 16, 18]} m={[0, 1, 2, 2, 2, 2]} w='10%' onClick={() =>{
+            <Button as={motion.button} initial={{x : 2000, y : -2000, opacity : 0}} animate={{x : 0, y : 0, opacity : 1}} transition='0.5s' fontSize={[8, 10, 12, 14, 16, 18]} m={[0, 1, 2, 2, 2, 2]} w='10%' onClick={() =>{
                 if (this.state.index < 3){
                     this.setState({index : this.state.index + 1});
                 }else{
