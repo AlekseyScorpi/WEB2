@@ -1,5 +1,5 @@
 import { Button, Flex } from '@chakra-ui/react'
-import React, { Component } from 'react'
+import React, {useState} from 'react'
 import { motion } from 'framer-motion'
 import WorkContainer from './WorkContainer'
 import fish1 from '../images/fish1.png'
@@ -29,39 +29,19 @@ const contentArray = [
     {name : 'Fractal Generator', image1 : frac1, image2 : frac2, ghLink : 'https://github.com/AlekseyScorpi/oop8', min1 : frac1min, min2 : frac2min}
 ]
 
-export default class WorkComponent extends Component {
 
-    constructor(props){
-        super(props)
-        this.state = {
-            index : 0,
-        }
-    }
-
-
-  render() {
-    return (
-        <Flex w='100%' h='80vh' alignItems='center' justify='center' >
-            <Button as={motion.button} initial={{x : -2000, y : -2000, opacity : 0}} animate={{x : 0, y : 0, opacity : 1}} transition='0.5s' fontSize={[8, 10, 12, 14, 16, 18]} m={[0, 1, 2, 2, 2, 2]} w='10%' onClick={() =>{
-                if (this.state.index > 0){
-                    this.setState({index : this.state.index - 1});
-                }else{
-                    this.setState({index : 3});
-                }
-            }}>
-                Previous
-            </Button>
-            <WorkContainer data={contentArray[this.state.index]}/>
-            <Button as={motion.button} initial={{x : 2000, y : -2000, opacity : 0}} animate={{x : 0, y : 0, opacity : 1}} transition='0.5s' fontSize={[8, 10, 12, 14, 16, 18]} m={[0, 1, 2, 2, 2, 2]} w='10%' onClick={() =>{
-                if (this.state.index < 3){
-                    this.setState({index : this.state.index + 1});
-                }else{
-                    this.setState({index : 0});
-                }
-            }}>
-                Next
-            </Button>
-        </Flex>
-    )
-  }
+export default function WorkComponent() {
+    const [index, setIndex] = useState(0)
+  return (
+    <Flex w='100%' h='80vh' alignItems='center' justify='center' >
+        <Button as={motion.button} initial={{x : -2000, y : -2000, opacity : 0}} animate={{x : 0, y : 0, opacity : 1}} transition='0.5s' whileHover={{scale : 1.1}} fontSize={[8, 10, 12, 14, 16, 18]} m={[0, 1, 2, 2, 2, 2]} w='10%' onClick={() =>{index === 0 ? setIndex(3) : setIndex(index - 1)}}>
+            Previous
+        </Button>
+        <WorkContainer data={contentArray[index]}/>
+        <Button as={motion.button} initial={{x : 2000, y : -2000, opacity : 0}} animate={{x : 0, y : 0, opacity : 1}} transition='0.5s' whileHover={{scale : 1.1}} fontSize={[8, 10, 12, 14, 16, 18]} m={[0, 1, 2, 2, 2, 2]} w='10%' onClick={() =>{index === 3 ? setIndex(0) : setIndex(index + 1)}}>
+             Next
+        </Button>
+    </Flex>
+  )
 }
+
