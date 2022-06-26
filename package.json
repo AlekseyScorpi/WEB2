@@ -8,9 +8,11 @@
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "framer-motion": "^6.3.11",
+    "fslightbox-react": "^1.6.2-2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^3.11.0",
+    "react-popupbox": "^2.0.9",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^0.2.4"
