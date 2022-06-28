@@ -34,11 +34,11 @@ export default function WorkComponent() {
     const [index, setIndex] = useState(0)
   return (
     <Flex w='100%' h='80vh' alignItems='center' justify='center' >
-        <Button as={motion.button} initial={{x : -2000, y : -2000, opacity : 0}} animate={{x : 0, y : 0, opacity : 1}} transition='0.5s' whileHover={{scale : 1.1}} fontSize={[8, 10, 12, 14, 16, 18]} m={[0, 1, 2, 2, 2, 2]} w='10%' onClick={() =>{index === 0 ? setIndex(3) : setIndex(index - 1)}}>
+        <Button as={motion.button} initial={{x : -2000, y : -2000, opacity : 0}} animate={{x : 0, y : 0, opacity : 1}} transition='0.5s' whileHover={{scale : 1.08}} fontSize={[8, 10, 12, 14, 16, 18]} m={[0, 1, 2, 2, 2, 2]} w='10%' onClick={() =>{index === 0 ? setIndex(3) : setIndex(index - 1)}}>
             Previous
         </Button>
         <WorkContainer data={contentArray[index]}/>
-        <Button as={motion.button} initial={{x : 2000, y : -2000, opacity : 0}} animate={{x : 0, y : 0, opacity : 1}} transition='0.5s' whileHover={{scale : 1.1}} fontSize={[8, 10, 12, 14, 16, 18]} m={[0, 1, 2, 2, 2, 2]} w='10%' onClick={() =>{index === 3 ? setIndex(0) : setIndex(index + 1)}}>
+        <Button as={motion.button} initial={{x : 2000, y : -2000, opacity : 0}} animate={{x : 0, y : 0, opacity : 1}} transition='0.5s' whileHover={{scale : 1.08}} fontSize={[8, 10, 12, 14, 16, 18]} m={[0, 1, 2, 2, 2, 2]} w='10%' onClick={() =>{index === 3 ? setIndex(0) : setIndex(index + 1)}}>
              Next
         </Button>
     </Flex>
