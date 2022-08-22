@@ -7,7 +7,7 @@ import {
 
 import Home from './Home';
 import About from './About';
-import Works from './Works';
+import WorkComponent from './WorkComponent';
 
 
 export default function ContentBody() {
@@ -17,7 +17,7 @@ export default function ContentBody() {
       <Routes>
         <Route path='WEB2' element={<Home />} />
         <Route path='WEB2/about' element={<About />} />
-        <Route path='WEB2/works' element={<Works />} />
+        <Route path='WEB2/works' element={<WorkComponent />} />
       </Routes>
     </Box>
   )

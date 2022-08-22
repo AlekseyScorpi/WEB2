@@ -18,7 +18,7 @@ export default function Home() {
          my <Link href='https://vk.com/alekseyscorpi' isExternal color={colorMode === 'light' ? 'cyan.600' : 'orange.600'}>VK</Link>.
         </Box>
       </Box>
-      <Box maxH={['50%', '50%', '50%', '100%', '100%', '100%']} w='100%' display='flex' justifyContent='center' alignItems='center'>
+      <Box w='100%' display='flex' justifyContent='center' alignItems='center'>
         <CustomImage colorMode={colorMode} />
       </Box>
     </Flex>

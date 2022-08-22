@@ -15,4 +15,3 @@ export default function CustomImage(props) {
     <Image as={motion.img} initial={{x : 2000, opacity : 0}} animate={{x : 0, opacity : 1}} transition='0.4s' maxH='100%' m={8} objectFit='cover' boxShadow={props.colorMode === 'light' ? '0px 0px 10px black' : '0px 0px 10px red'} border='4px' borderColor={props.colorMode === 'light' ? 'gray.900' : 'gray.700'} src={imagesArray[index]} boxSize={['150px', '250px', '325px', '350px', '400px', '400px']} borderRadius='full'/>
   )
 }
-

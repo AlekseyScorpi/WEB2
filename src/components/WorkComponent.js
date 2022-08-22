@@ -1,4 +1,4 @@
-import { Button, Flex } from '@chakra-ui/react'
+import { Button, Box, Flex } from '@chakra-ui/react'
 import React, {useState} from 'react'
 import { motion } from 'framer-motion'
 import WorkContainer from './WorkContainer'
@@ -33,15 +33,17 @@ const contentArray = [
 export default function WorkComponent() {
     const [index, setIndex] = useState(0)
   return (
-    <Flex w='100%' h='80vh' alignItems='center' justify='center' >
-        <Button as={motion.button} initial={{x : -2000, y : -2000, opacity : 0}} animate={{x : 0, y : 0, opacity : 1}} transition='0.5s' whileHover={{scale : 1.08}} fontSize={[8, 10, 12, 14, 16, 18]} m={[0, 1, 2, 2, 2, 2]} w='10%' onClick={() =>{index === 0 ? setIndex(3) : setIndex(index - 1)}}>
-            Previous
-        </Button>
+    <Box w='100%' h='80vh' alignItems='center' justifyContent='center' margin = 'auto'>
         <WorkContainer data={contentArray[index]}/>
-        <Button as={motion.button} initial={{x : 2000, y : -2000, opacity : 0}} animate={{x : 0, y : 0, opacity : 1}} transition='0.5s' whileHover={{scale : 1.08}} fontSize={[8, 10, 12, 14, 16, 18]} m={[0, 1, 2, 2, 2, 2]} w='10%' onClick={() =>{index === 3 ? setIndex(0) : setIndex(index + 1)}}>
-             Next
-        </Button>
-    </Flex>
+        <Flex justifyContent='space-evenly'>
+          <Button as={motion.button} initial={{x : -2000, y : -2000, opacity : 0}} animate={{x : 0, y : 0, opacity : 1}} transition='0.5s' whileHover={{scale : 1.08}} fontSize={[10, 14, 16, 20, 24, 28]} m={[0, 1, 2, 2, 2, 2]} w = '15%' onClick={() =>{index === 0 ? setIndex(3) : setIndex(index - 1)}}>
+              Previous
+          </Button>
+          <Button as={motion.button} initial={{x : 2000, y : -2000, opacity : 0}} animate={{x : 0, y : 0, opacity : 1}} transition='0.5s' whileHover={{scale : 1.08}} fontSize={[10, 14, 16, 20, 24, 28]} m={[0, 1, 2, 2, 2, 2]} w = '15%' onClick={() =>{index === 3 ? setIndex(0) : setIndex(index + 1)}}>
+              Next
+          </Button>
+        </Flex>
+    </Box>
   )
 }
 
