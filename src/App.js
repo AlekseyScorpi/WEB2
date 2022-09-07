@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   ChakraProvider,
   theme
@@ -10,6 +10,9 @@ import ContentBody from './components/ContentBody';
 
 
 function App() {
+  document.body.style.overflow = "hidden"
+  const [resize, setResize] = useState(false)
+  window.onresize = () => {setResize(!resize)}
   return (
     <ChakraProvider theme={theme}>
       <Router>
